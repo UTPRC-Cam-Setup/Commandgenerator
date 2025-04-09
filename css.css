@@ -1,0 +1,23 @@
+.heading {
+    border-width: 20px;
+    border-style: solid;
+    border-color: #6600ff;
+    text-align: center;
+    border-radius: 50px;
+    background-color: greenyellow;
+    font-family: monospace;
+}
+body {
+    background-color: #3b3838;
+}
+.heading.inner {
+    text-align: left;
+    border-width: 0;
+    text-indent: 10px;
+    background-color: transparent;
+
+}
+h3.heading.inner {
+    border-width: 0;
+    text-indent: 10px;
+}
