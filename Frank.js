@@ -1,4 +1,8 @@
-
+class camera {
+    camera(cameraname,x,y,z){
+       return ":fly | :to "+ x + "," + y + "," + z + " | :camera " + cameraname + " | "
+    }
+}
 function createcommand() {
     var cameraname = document.getElementById("camera").value;
     var X = document.getElementById("X").value;
