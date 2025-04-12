@@ -21,3 +21,16 @@ h3.heading.inner {
     border-width: 0;
     text-indent: 10px;
 }
+.heading.button {
+    border-width: 1px;
+    
+}
+input {
+    background-color: #6600ff;
+    color: greenyellow;
+    border-style: solid;
+    border-color: #6600ff;
+    font-family: monospace;
+    border-radius: 50px;
+    border-width: 1px;
+}

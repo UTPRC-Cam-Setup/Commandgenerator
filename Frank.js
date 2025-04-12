@@ -20,20 +20,12 @@ sessionStorage.setItem("camera"+ sessionStorage.getItem("cameraname"), workingca
 sessionStorage.setItem("cameraname", cameraname+"*")
 }
 function createcommand() {
-   chunk1 = sessionStorage.getItem("camera*");
-   chunk2 = sessionStorage.getItem("camera**")
-   chunk3 = sessionStorage.getItem("camera***")
-   chunk4 = sessionStorage.getItem("camera****")
-   chunk5 = sessionStorage.getItem("camera*****")
-   chunk6 = sessionStorage.getItem("camera******")
-   chunk7 = sessionStorage.getItem("camera*******")
-   chunk8 = sessionStorage.getItem("camera********")
-   chunk9 = sessionStorage.getItem("camera*********")
-   chunk10 = sessionStorage.getItem("camera*********")
- let chunks = ([chunk1,chunk2,chunk3,chunk4,chunk5,chunk6,chunk7,chunk8,chunk9,chunk10])
-  var chunksspliced = chunks.slice(0,document.getElementById("numberofchunks").value) 
-    document.getElementById("output").value = ":fly | " + ((chunksspliced.toString()).replaceAll(",:",":")) + " :res"
-console.log(((chunksspliced.toString()).replaceAll(",:",":")))
+  let chunks = new Array()
+   for (let i = 1; i < sessionStorage.length;i++) {
+   chunks.push(sessionStorage.getItem("camera" + sessionStorage.getItem("cameraname").slice(i)))
+   }
+   document.getElementById("output").value = ":fly | " + chunks.toString().replaceAll(" ,"," ") + ":res"
+
     
    
 }
