@@ -11,11 +11,14 @@ class camera {
     }
 }
 sessionStorage.clear()
+let camlist = new Array()
 var cameraname = "*"
 sessionStorage.setItem("cameraname",cameraname)
 function createcamera() {
 cameraname = sessionStorage.getItem("cameraname")
  var workingcam = new camera(document.getElementById("camera").value,document.getElementById("X").value,document.getElementById("Y").value,document.getElementById("Z").value)
+ camlist.push(workingcam.result())
+ document.getElementById("preview").innerHTML = camlist.toString()
 sessionStorage.setItem("camera"+ sessionStorage.getItem("cameraname"), workingcam.result())
 sessionStorage.setItem("cameraname", cameraname+"*")
 }
